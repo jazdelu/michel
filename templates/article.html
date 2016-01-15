@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="/static/sss/sss.css">
+{% endblock %}
+{% block content %}
+<div class="content container">
+
+	<div class="row article">
+		<div class="col s2">
+			<div class="row">
+				<a href="/blog/" class="back"><i class="fa fa-chevron-left"></i>&nbsp;BACK TO JOUNAL</a>
+			</div>
+		</div>
+		<div class="col s10">
+			<h4 class="col s12 title">{{ blog.title }}</h4>
+			<p class="col s12 date">{{ blog.pub_date|date:'SHORT_DATE_FORMAT' }}</p>
+			<div class="slidershow col s12">
+				{% for b in blog.banner_set.all %}
+				<img class="responsive-img" src="{{ b.image.url }}" />
+				{% endfor %}
+			</div>
+			<div class="col s12">
+				<div class="text">
+				{{ blog.content|safe }}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}
+{% block js %}
+<script type="text/javascript" src="/static/sss/sss.min.js"></script>
+<script>
+	jQuery(function($) {
+	$('.slidershow').sss();
+});
+</script>
+{% endblock %}

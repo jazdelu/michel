@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="content container">
+	<div class="row">
+	<div class="col s11 offset-l1">
+		<a href="/lookbook/" class="back"><i class="fa fa-chevron-left"></i>&nbsp;BACK TO LOOKBOOK</a>
+	</div>
+	</div>
+	<div class="row look">
+		<div class="col s6 offset-l1 " style="position:relative;">
+			<a href="#"><img class="cover responsive-img" src="{{ l.image.url }}" /></a>
+		</div>
+		<div class="col s3 offset-l1">
+			<div class="row">
+			<h4 class="name">{{ l.name }}</h4>
+			</div>
+			{% for p in l.products.all %}
+			<div class="row p">
+			<a href="/product/{{ p.id }}/" class="col s8">{{ p.name|upper }}</a><span class="col s4">${{ p.price }}</span>
+			<p class="col s12 ">{{ p.short_description }}</p>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+	<div class="row valign-wrapper">
+		<div class="col s1">
+			<a href="/lookbook/{{ prev_l.id }}/" class="col s12 prev"><i class="fa fa-chevron-left fa-2x"></i></a>
+		</div>
+		<div class="col s10 thumb-1">
+			<ul>
+			{% for look in lookbooks %}
+			<li data='{{ look.id }}'><a href="/lookbook/{{ look.id }}"><img class="reponsive-img" src="{{ look.image.url }}" width="60" height="90" /></a></li>
+			{% endfor %}
+			</ul>
+		</div>
+		<div class="col s1">
+			<a href="/lookbook/{{ next_l.id }}/" class="col s12 next"><i class="fa fa-chevron-right fa-2x"></i></a>
+		</div>
+	</div>
+</div>
+{% endblock %}
+{% block js %}
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(".thumb-1>ul>li[data={{ l.id }}]").addClass('active');
+		if ({{ status }} == -1 ){
+			$('.prev').hide();
+		} 
+		else if ({{ status }} == 1){
+			$('.next').hide();
+		}
+	});
+</script>
+{% endblock %}

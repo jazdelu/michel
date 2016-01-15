@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="content">
+	<div class="row lookbook container">
+		{% for l in lookbooks %}
+			{% if forloop.counter < 10 %}
+			<div class="col s4">
+			<a href="/lookbook/{{ l.id }}/" class="l"><img class="responsive-img" src="{{ l.image.url }}"/><label class="no">0{{ forloop.counter }}</label></a>
+			</div>
+			{% else %}
+			<div class="col s4">
+			<a href="/lookbook/{{ l.id }}/" class="l"><img class="responsive-img" src="{{ l.image.url }}"/><label class="no">{{ forloop.counter }}</label></a>
+			</div>	
+			{% endif %}	
+		{% endfor %}
+	</div>
+	<div class="fixed-action-btn" id="cd-top" style="bottom:24px;right:72px;">
+		<a href="#top" class="btn-floating btn-large black"><i class="fa fa-arrow-up 3x"></i></a>
+	</div>
+</div>
+{% endblock %}
+{% block js %}
+<script type="text/javascript" src="/static/michel/js/cd-top.js"></script>
+{% endblock %}

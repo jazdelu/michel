@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="/static/lightbox/css/lightbox.css">
+{% endblock %}
+
+{% block content %}
+<div class="content container">
+	<div class="row">
+		<div class="col s11 offset-l1">
+			<a href="/lookbook/" class="back"><i class="fa fa-chevron-left"></i>&nbsp;BACK</a>
+		</div>
+	</div>
+	<div class="row product">
+		<div class="col s5 offset-l1">
+			<div class="col s12 photo">
+				<a href="http://placehold.it/1280x1920"   data-lightbox="image-1"><img class="responsive-img" src="http://placehold.it/500x750"></a>
+			</div>
+			<div class="col s12 photo">
+				<a href="http://placehold.it/1280x1920"   data-lightbox="image-1"><img class="responsive-img" src="http://placehold.it/500x750"></a>
+			</div>
+			<div class="col s12 photo">
+				<a href="http://placehold.it/1280x1920"   data-lightbox="image-1"><img class="responsive-img" src="http://placehold.it/500x750"></a>
+			</div>
+			<div class="col s12 photo">
+				<a href="http://placehold.it/1280x1920"   data-lightbox="image-1"><img class="responsive-img" src="http://placehold.it/500x750"></a>
+			</div>
+			<div class="col s12 photo">
+				<a href="http://placehold.it/1280x1920"   data-lightbox="image-1"><img class="responsive-img" src="http://placehold.it/500x750"></a>
+			</div>
+		</div>
+		<div class="col s4 offset-l1">
+		<div class="detail">
+			<h5 class="col s12">TOP MIAMI &nbsp;&nbsp;&nbsp;&nbsp; $119</h5>
+			<p class="col s12 ">TSHIRT 100% Cotton</p>
+			<ul class="col s12">
+				<li>
+					<canvas width="20" height="20" style="border:1px solid #000000;background-color:#fff;margin-right:10px;">
+					Your browser does not support the HTML5 canvas tag.
+					</canvas>
+				</li>
+				<li>
+					<canvas  width="20" height="20" style="border:1px solid #000000;background-color:red;margin-right:10px;">
+					Your browser does not support the HTML5 canvas tag.
+					</canvas>
+				</li>
+			</ul>
+			<div class="col s12 info">
+				<h5>DESCRIPTION</h5>
+				<div class="text">
+				</div>
+			</div>
+			<div class="col s12">
+			<a class="waves-effect waves-light black btn"><i class="fa fa-cart-plus right"></i>GO TO SHOP</a>
+			</div>
+		</div>
+		</div>
+	</div>
+	<div class="fixed-action-btn" id="cd-top" style="bottom:24px;right:72px;">
+		<a href="#top" class="btn-floating btn-large black"><i class="fa fa-arrow-up 3x"></i></a>
+	</div>
+</div>
+{% endblock %}
+{% block js %}
+<script type="text/javascript" src="/static/lightbox/js/lightbox.min.js"></script>
+<script type="text/javascript" src="/static/michel/js/jquery.sticky.js"></script>
+<script type="text/javascript" src="/static/michel/js/cd-top.js"></script>
+<script type="text/javascript">
+    lightbox.option({
+    	'showImageNumberLabel':false
+    })
+  $(document).ready(function(){
+    $(".detail").sticky({topSpacing:150});
+  });
+</script>
+{% endblock %}

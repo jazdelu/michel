@@ -1,0 +1,550 @@
+/**
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ */
+
+/*----------Font-------------*/
+@font-face {
+  font-family: 'Open Sans Condensed';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Open Sans Cond Light'), local('OpenSans-CondensedLight'), url(/static/michel/font/osc/OpenSans-CondLight.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans Condensed';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Open Sans Condensed Bold'), local('OpenSans-CondensedBold'), url(/static/michel/font/osc/OpenSans-CondBold.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans Condensed';
+  font-style: italic;
+  font-weight: 300;
+  src: local('Open Sans Cond Light Italic'), local('OpenSans-CondensedLightItalic'), url(/static/michel/font/osc/OpenSans-CondLightItalic.ttf) format('truetype');
+}
+/*------------Reset-----------*/
+*{
+	outline: none!important;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+html,body{
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+body {
+	background-color: #fff;
+	font-family: "Open Sans Condensed","Simhei";
+	font-weight: 300;
+	z-index: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly]), input[type=email]:focus:not([readonly]), input[type=url]:focus:not([readonly]), input[type=time]:focus:not([readonly]), input[type=date]:focus:not([readonly]), input[type=datetime-local]:focus:not([readonly]), input[type=tel]:focus:not([readonly]), input[type=number]:focus:not([readonly]), input[type=search]:focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #000;
+    box-shadow: none;
+}
+
+input[type=text]:focus:not([readonly])+label, input[type=password]:focus:not([readonly])+label, input[type=email]:focus:not([readonly])+label, input[type=url]:focus:not([readonly])+label, input[type=time]:focus:not([readonly])+label, input[type=date]:focus:not([readonly])+label, input[type=datetime-local]:focus:not([readonly])+label, input[type=tel]:focus:not([readonly])+label, input[type=number]:focus:not([readonly])+label, input[type=search]:focus:not([readonly])+label, textarea.materialize-textarea:focus:not([readonly])+label {
+    color: #000;
+}
+
+input[type=text].valid, input[type=text]:focus.valid, input[type=password].valid, input[type=password]:focus.valid, input[type=email].valid, input[type=email]:focus.valid, input[type=url].valid, input[type=url]:focus.valid, input[type=time].valid, input[type=time]:focus.valid, input[type=date].valid, input[type=date]:focus.valid, input[type=datetime-local].valid, input[type=datetime-local]:focus.valid, input[type=tel].valid, input[type=tel]:focus.valid, input[type=number].valid, input[type=number]:focus.valid, input[type=search].valid, input[type=search]:focus.valid, textarea.materialize-textarea.valid, textarea.materialize-textarea:focus.valid {
+    border-bottom: 1px solid #4CAF50;
+    box-shadow: 0 1px 0 0 #4CAF50
+}
+
+/*----------Global Setting-----------*/
+h1, h2, h3, h4, h5, h6{
+	font-weight: bold;
+}
+
+h1{
+	font-size: 48px;
+}
+h2{
+	font-size: 36px;
+}
+h3{
+	font-size: 30px;
+}
+h4{
+	font-size: 26px;
+}
+h5{
+	font-size: 22px;
+}
+h6{
+	font-size: 18px;
+}
+a{
+	-o-transition:color .3s ease-out, background .3s ease-in;
+	-ms-transition:color .3s ease-out, background .3s ease-in;
+	-moz-transition:color .3s ease-out, background .3s ease-in;
+	-webkit-transition:color .3s ease-out, background .3s ease-in;
+  /* ...and now override with proper CSS property */
+	transition:color .3s ease-out, background .3s ease-in;
+	display: block;
+	text-decoration: none;
+	color:#000;
+}
+a:hover{
+	text-decoration: none;
+	color:#000;
+}
+p,span,b,blockquote{
+	line-height: 26px;
+	font-weight: 300;
+}
+b{
+	font-weight: 700;
+}
+/*----------Header-----------*/
+.logo{
+	text-align: center;
+	height: 64px;
+	font-weight: normal;
+
+}
+.logo>a{
+	display: block;
+	margin: 0 auto;
+	width: 140px;
+	font-weight: normal;
+	font-size: 42px;
+	letter-spacing: 2px;
+}
+.language{
+	overflow: hidden;
+	position: absolute;
+	top: 15px;
+	right: 30px;
+}
+.language>ul{
+	overflow: hidden;
+	float: left;
+}
+.language>ul>li{
+	padding: 0px 5px;
+	float: left;
+}
+.language>ul>li>a{
+	height: 32px;
+	line-height: 32px;
+}
+header{
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background-color: #fff;
+	z-index: 100;
+}
+header>nav{
+	border-bottom:4px solid #000;
+	box-shadow:0px 10px 10px rgba(0,0,0,0);
+	height: 48px;
+}
+header .nav-wrapper{
+	background-color: #fff;
+	color: #000;
+	text-align: center;
+}
+header .nav-wrapper>ul{
+	overflow: visible;
+	height: 100%;
+	display: inline-block;
+}
+header .nav-wrapper>ul>li{
+	height: 100%;
+	padding: 0px 20px;
+	position: relative;
+	overflow: visible;
+}
+header .nav-wrapper>ul>li:hover{
+	background-color: #fff;
+}
+header .nav-wrapper>ul>li>a{
+	color: #000;
+	height: 48px;
+	line-height: 48px;
+	vertical-align: bottom;
+}
+header .nav-wrapper>ul>li>a:hover{
+	color: #000;
+}
+.sub-nav{
+	background-color: transparent;
+	list-style: none;
+	position: absolute;
+	top:100%;
+	height: 56px;
+	z-index: 200;
+	width: 300px;
+	display: none;
+}
+.sub-nav>li{
+	float: left;
+	background-color: transparent;
+}
+.sub-nav>li:hover{
+	background-color: transparent;
+}
+.sub-nav>li>a{
+	color: #000;
+	line-height: 56px;
+}
+.sub-nav>li>a:hover{
+	background-color: transparent;
+	text-decoration: underline;
+}
+/*----------Content-----------*/
+.wrap{
+	padding-top:220px;
+	min-height: 100%;
+	position: relative;
+	margin-bottom: -84px;
+	padding-bottom: 40px;
+}
+.wrap:after {
+  content: "";
+  display: block;
+}
+.content{
+	margin-bottom: 60px;
+	z-index: 1;
+}
+.homepage .col>a{
+	margin-bottom: 1.5rem;
+}
+main>.container{
+	width: 75%;
+}
+/*----------Footer-----------*/
+footer.page-footer{
+	width: 100%;
+	border-top:4px solid #000;
+	box-shadow:0px 10px 10px rgba(0,0,0,0);
+	height: 84px;
+	margin: 0;
+	padding: 0;
+}
+footer.page-footer>.container>.row{
+	margin-top:20px;
+	margin-bottom: 20px;
+	height: 42px;
+}
+footer.page-footer>.container .row{
+	margin-bottom: 0px;
+}
+.newsletter{
+	height: 100%;
+}
+.newsletter .input-field {
+	margin-top: 0px;
+}
+
+ .newsletter .input-field input {
+     color: #000;
+     border: 1px solid #999;
+     height: 32px;
+     padding-left: 4px;
+     font-size: 0.8rem;
+     margin-bottom: 0px;
+ }
+   /* label underline focus color */
+ .newsletter .input-field input[type=email]:focus {
+    border:1px solid #000;
+    background-color: transparent;
+ }
+  .newsletter .input-field input[type=email]:active{
+     border:1px solid #000;
+ }
+   /* valid color */
+ .newsletter .input-field input[type=email].valid {
+     border: 1px solid #000;
+   }
+.social{
+	height: 100%;
+ }
+.social>ul{
+	overflow: hidden;
+	list-style: none;
+}
+.social>ul>li{
+	float: left;
+	padding: 0px 5px 0px 5px;
+}
+.social>ul>li>a{
+   width: 32px;
+   height: 32px;
+   -moz-border-radius: 16px; 
+   -webkit-border-radius: 16px; 
+   border-radius: 16px;
+   text-align: center;
+   line-height: 32px;
+   color: #999;
+}
+.social>ul>li>a:hover{
+	color: #000;
+}
+.copyright{
+	height: 100%;
+}
+.copyright>h6{
+	width: 100%;
+}
+/*----------Lookbook-----------*/
+.lookbook .l{
+	display: block;
+	text-align: center;
+	padding-bottom: 20px;
+	position: relative;
+}
+.lookbook .no{
+	font-size: 1.5rem;
+	position: absolute;
+	bottom: 2rem;
+	right: 1rem;
+	color: #fff;
+}
+/*----------Look-----------*/
+.back{
+	letter-spacing: 2px;
+	color:#999;
+	display: inline;
+}
+.back:hover{
+	color:#000;
+}
+.look .p{
+	margin-bottom: 40px;
+}
+.look h4{
+	margin-left:10px;
+	margin-top: 100px;
+	margin-bottom: 40px;
+}
+.look .p>a:hover{
+	text-decoration: underline;	
+}
+.thumb-1{
+	text-align: center;
+}
+.thumb-1>ul{
+	display: inline-block;
+}
+.thumb-1>ul>li{
+	float: left;
+	padding: 0px 0.75rem;
+}
+.thumb-1>ul>li:last-child{
+	float: left;
+	margin-right: 0px;
+}
+.thumb-1>ul>li>img{
+	border: 2px solid #fff;
+}
+.thumb-1>ul>li.active>img{
+	border: 2px solid #000;
+}
+/*---------Product-------------*/
+.product .col{
+	padding: 0px;
+}
+.product .photo{
+	margin-bottom: 20px;
+}
+.product .thumb{
+	overflow: hidden;
+}
+.product .thumb>li{
+	margin-top: 10px;
+	float: left;
+	margin-right: 10px;
+}
+.product .thumb>li:last-child{
+	margin-right: 0px;
+}
+.back{
+	margin-bottom: 10px;
+}
+.detail{
+	overflow: hidden;
+	margin-bottom: 60px;
+	padding-left: 64px;
+}
+.detail>h4{
+	margin-bottom: 20px;
+}
+.detail>p{
+	margin-bottom: 20px;
+}
+.detail>ul{
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+
+.detail>ul>li{
+	float: left;
+	margin-right: 2px;
+}
+.detail>.info{
+	margin-top: 10px;
+}
+.detail>.info>.text{
+	min-height: 200px;
+	border: 2px solid #000;
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+.detail a.btn:hover{
+	color:#fff;
+}
+/*---------about-------------*/
+.about .text{
+	border: 2px solid #000;
+	padding:5px 3px;
+	height: 300px;
+}
+/*---------contact-------------*/
+.contact>div{
+	border: 2px solid #000;
+	padding-top: 20px!important;
+	padding-bottom: 20px!important;
+}
+.contact a.btn{
+	float: right;
+}
+.contact h3{
+	margin-left: 20px;
+}
+.contact .text{
+	min-height: 520px;
+}
+.contact form .input-field>input:focus:not([readonly]) + label{
+	color: #000;
+}
+.contact form .input-field>input:focus:not([readonly]).valid{
+	border-bottom: #000;
+} 
+/*---------archive-------------*/
+.archive .c{
+	position: relative;
+	margin-bottom: 20px;
+}
+.archive .c>.overlay{
+  display: block;
+  position: absolute;
+  z-index: 20;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0);
+  overflow: hidden;
+  transition: all 0.5s;
+  color: transparent;
+  top: 0;
+  left: 0;
+  line-height: 100%;
+  letter-spacing: 2px;
+}
+.archive .c>.overlay>p{
+  position: relative;
+  top: 45%;
+  transform: translateY(-45%);
+}
+.archive .c:hover>.overlay{
+  background: rgba(0, 0, 0, 0.65);
+  overflow: hidden;
+  color: #fff;
+	-o-transition:all .3s ease-out, background .3s ease-in;
+	-ms-transition:all .3s ease-out, background .3s ease-in;
+	-moz-transition:all .3s ease-out, background .3s ease-in;
+	-webkit-transition:all .3s ease-out, background .3s ease-in;
+	/* ...and now override with proper CSS property */
+	transition:all .3s ease-out, background .3s ease-in;
+  color: #fff;
+}
+
+/*------blog------*/
+.blog .b{
+	border: 2px solid #000;
+	padding: 10px 0px 0px 0px;
+}
+.blog .b>.title{
+	margin-bottom: 20px; 
+	font-weight:300;
+}
+.blog .b>.abstract{
+	line-height: 26px;
+	margin-bottom: 20px;
+}
+.blog .b>.view{
+	text-align: center;
+	padding-bottom: 5px;
+}
+/*-----article--------*/
+.article .back{
+	letter-spacing: 2px;
+	text-align: right;
+}
+.article .title{
+	margin-bottom: 20px;
+}
+.article .date{
+	color:#ccc;
+	margin-bottom: 20px;
+}
+.article .text{
+	border: 2px solid #000;
+	margin: 20px auto;
+	min-height: 200px;
+	padding: 10px 5px 10px 5px;
+	line-height: 26px;
+}
+/*-----cd-top--------*/
+#cd-top>a{
+	-webkit-transition: 1s;
+	-moz-transition: 1s;
+	transition: 1s;
+	opacity:0.5; 
+}
+#cd-top>a:hover{
+	opacity: 1;
+}

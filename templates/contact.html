@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="content container">
+	<div class="row contact">
+		<div class="col s5">
+			<h3>CONTACT US</h3>
+		    <form class="col s12">
+		      <div class="row">
+		        <div class="input-field col s12">
+		          <input id="name" type="text" class="validate">
+		          <label for="name">Name*</label>
+		        </div>
+		      </div>
+		      <div class="row">
+		        <div class="input-field col s12">
+		          <input id="phone" type="text" class="validate">
+		          <label for="phone">Phone*</label>
+		        </div>
+		      </div>
+		      <div class="row">
+		        <div class="input-field col s12">
+		          <input id="email" type="email" class="validate">
+		          <label for="email">Email*</label>
+		        </div>
+		      </div>
+		      <div class="row">
+		        <div class="input-field col s12">
+		          <textarea id="textarea1" class="materialize-textarea"></textarea>
+		          <label for="textarea1">Message*</label>
+		        </div>
+		      </div>
+		      <a class="waves-effect waves-light grey darken-1 btn"><i class="fa fa-envelope-o left"></i>SUBMIT</a>
+		    </form>
+		</div>
+		<div class="col s5 offset-l2">
+			<div class="text">
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

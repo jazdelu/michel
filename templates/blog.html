@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="content container">
+	<div class="row blog">
+		{% for b in blogs %}
+		<div class="col s10 offset-l1 b">
+			<h5 class="col s12 title">{{ b.title }}</h5>
+			<div class="col s12 abstract truncate">
+			{{ b.content|striptags }}
+			</div>
+			<div class="col s12 view">
+			<a class="grey darken-1 btn" href="/blog/{{ b.id }}/">VIEW</a>
+			</div>
+			<div class="cover">
+			<img class="responsive-img" src="{{ b.get_cover.image.url }}">
+			</div>
+		</div>
+		{% empty %}
+		<label>No blogs found!</label>
+		{% endfor %}
+	</div>
+	<div class="fixed-action-btn" id="cd-top" style="bottom:24px;right:72px;">
+		<a href="#top" class="btn-floating btn-large black"><i class="fa fa-arrow-up 3x"></i></a>
+	</div>
+</div>
+{% endblock %}
+{% block js %}
+<script type="text/javascript" src="/static/michel/js/cd-top.js"></script>
+{% endblock %}
